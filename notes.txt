@@ -1,0 +1,23 @@
+Rules :
+********
+1. create the database name with jira_app. database within the DB folder.   
+2. start the server using this command  
+   1. php artisan server
+   2. npm run dev
+3. migrate the table use this command
+   1. php artisan migrate
+4. populate the dummy for users and tasks through this command
+   1. php artisan db:seed --class=UserSeeder
+   2. php artisan db:seed --class=TaskListSeeder
+5. admin username : admin@gmail.com password : password
+6. Once you login by the credentials you can go with this URL : http://127.0.0.1:8000/tasks or click on the Tasks button
+7. Here you can assign the task and view the existing task.
+
+Notes :
+**********
+1. I have used an inbuilt breeze package to  validate user
+2. For this task I have used 3 levels of user role 1. admin 2, team lead, 3. employee
+3. Admin can assign tasks for team lead and employees.. 
+4. The team lead can assign tasks for only employees.
+5. Employees only can view the tasks.
+6. Every action is all notified by mail, for that you have to configure the SMTP configuration.
